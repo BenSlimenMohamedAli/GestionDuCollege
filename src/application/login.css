@@ -18,15 +18,13 @@
     -fx-min-height: 30px;
     -fx-cursor: hand;
     -fx-text-fill: white;
-    -fx-background-color: #FF3300;
+    -fx-background-color: linear-gradient(#FF3300,#140F2D);
 
 }
 
 .button:hover{
-    -fx-translate-x: 5px;
-    -fx-translate-y: 5px;
     -fx-translate-z: 2px;
-    -fx-background-color: linear-gradient(#FF3300,#140F2D);
+    -fx-background-color: linear-gradient(white,#140F2D);
     -fx-font-weight: bold;
 }
 
@@ -37,5 +35,12 @@
 
 /* label */
 .resultL{
-    -fx-fill: red;
+    -fx-text-fill: red;
+}
+
+/* Background de splashscreen */
+.splash{
+    -fx-background-image: url("./image/load.gif");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
 }

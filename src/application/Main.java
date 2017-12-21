@@ -10,17 +10,16 @@ import java.sql.*;
 
 public class Main extends Application {
     @Override
-    public void start(Stage login) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("login_page.fxml"));
+    public void start(Stage splash) throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("splash.fxml"));
         Parent root = (Parent) loader.load();
         Scene scene = new Scene(root);
-        login.setScene(scene);
-        login.setMinHeight(440);
-        login.setMaxHeight(440);
-        login.setMinWidth(615);
-        login.setMaxWidth(615);
-        login.setTitle("Login page");
-        login.show();
+        splash.setScene(scene);
+        splash.setMinHeight(500);
+        splash.setMaxHeight(500);
+        splash.setMinWidth(500);
+        splash.setMaxWidth(500);
+        splash.show();
     }
 
     public static void main(String[] args) {

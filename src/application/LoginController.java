@@ -26,7 +26,7 @@ public class LoginController {
     }
 
     @FXML
-    protected void doSomething(){
+    protected void seConnecter(){
         if(choixEnseignant.isSelected()){
             if( Enseignant.connecter(username.getText(),password.getText().equals("")? 0:Integer.parseInt(password.getText())) )
                 result.setText("Vous étes connecté"); // TODO
