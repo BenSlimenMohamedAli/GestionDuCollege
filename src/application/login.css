@@ -1,0 +1,41 @@
+.root{
+}
+.anchroPane{
+    -fx-background-image: url("./image/back.jpg");
+    -fx-opacity: 0.75;
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+
+.textField{
+    -fx-min-height:30px;
+    -fx-min-width: 200px;
+}
+
+/* Les buttons */
+.button{
+    -fx-min-width: 150px;
+    -fx-min-height: 30px;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-background-color: #FF3300;
+
+}
+
+.button:hover{
+    -fx-translate-x: 5px;
+    -fx-translate-y: 5px;
+    -fx-translate-z: 2px;
+    -fx-background-color: linear-gradient(#FF3300,#140F2D);
+    -fx-font-weight: bold;
+}
+
+.radioB{
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+/* label */
+.resultL{
+    -fx-fill: red;
+}

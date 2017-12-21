@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="collége@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="collége">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="company"/>
+    <schema id="4" parent="1" name="dali"/>
+    <schema id="5" parent="1" name="info"/>
+    <schema id="6" parent="1" name="information_schema"/>
+    <schema id="7" parent="1" name="myinfo"/>
+    <schema id="8" parent="1" name="mysql"/>
+    <schema id="9" parent="1" name="mystudent"/>
+    <schema id="10" parent="1" name="performance_schema"/>
+    <schema id="11" parent="1" name="sakila"/>
+    <schema id="12" parent="1" name="sys"/>
+    <schema id="13" parent="1" name="world"/>
+    <table id="14" parent="2" name="absence"/>
+    <table id="15" parent="2" name="classe"/>
+    <table id="16" parent="2" name="cours"/>
+    <table id="17" parent="2" name="eleve"/>
+    <table id="18" parent="2" name="enseignant"/>
+    <table id="19" parent="2" name="enseignement"/>
+    <table id="20" parent="2" name="salle"/>
+    <table id="21" parent="2" name="séance"/>
+    <column id="22" parent="14" name="date_absence">
+      <Position>1</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="23" parent="14" name="num_inscri">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="14" name="num_séance">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="25" parent="14" name="num_inscri">
+      <ColNames>num_inscri</ColNames>
+    </index>
+    <key id="26" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>num_séance
+num_inscri</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="27" parent="14" name="absence_ibfk_1">
+      <ColNames>num_inscri</ColNames>
+      <RefSchemaName>collége</RefSchemaName>
+      <RefTableName>eleve</RefTableName>
+      <RefColNames>num_inscri</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="28" parent="14" name="absence_ibfk_2">
+      <ColNames>num_séance</ColNames>
+      <RefSchemaName>collége</RefSchemaName>
+      <RefTableName>séance</RefTableName>
+      <RefColNames>num_séance</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="29" parent="15" name="num_classe">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="15" name="num_niveau">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="31" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>num_classe
+num_niveau</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="32" parent="16" name="type_cours">
+      <Position>1</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="33" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>type_cours</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="34" parent="17" name="num_inscri">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="17" name="nom">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="36" parent="17" name="prenom">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="37" parent="17" name="num_classe">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="38" parent="17" name="num_niveau">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="39" parent="17" name="num_classe">
+      <ColNames>num_classe
+num_niveau</ColNames>
+    </index>
+    <key id="40" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>num_inscri</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="41" parent="17" name="eleve_ibfk_1">
+      <ColNames>num_classe
+num_niveau</ColNames>
+      <RefSchemaName>collége</RefSchemaName>
+      <RefTableName>classe</RefTableName>
+      <RefColNames>num_classe
+num_niveau</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="42" parent="18" name="cin_ens">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="18" name="nom_ens">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <key id="44" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>cin_ens</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="45" parent="19" name="cin_ens">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="19" name="type_cours">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="47" parent="19" name="type_cours">
+      <ColNames>type_cours</ColNames>
+    </index>
+    <key id="48" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>cin_ens
+type_cours</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="49" parent="19" name="enseignement_ibfk_1">
+      <ColNames>cin_ens</ColNames>
+      <RefSchemaName>collége</RefSchemaName>
+      <RefTableName>enseignant</RefTableName>
+      <RefColNames>cin_ens</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="50" parent="19" name="enseignement_ibfk_2">
+      <ColNames>type_cours</ColNames>
+      <RefSchemaName>collége</RefSchemaName>
+      <RefTableName>cours</RefTableName>
+      <RefColNames>type_cours</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="51" parent="20" name="num_salle">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="52" parent="20" name="capacité">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="53" parent="20" name="type_salle">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <key id="54" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>num_salle</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="55" parent="21" name="num_séance">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="56" parent="21" name="heure_séance">
+      <Position>2</Position>
+      <DataType>time|0</DataType>
+    </column>
+    <column id="57" parent="21" name="jour_séance">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="58" parent="21" name="num_niveau">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="59" parent="21" name="num_classe">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="60" parent="21" name="cin_ens">
+      <Position>6</Position>
+      <DataType>int(8)|0</DataType>
+    </column>
+    <column id="61" parent="21" name="type_cours">
+      <Position>7</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="62" parent="21" name="num_salle">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="63" parent="21" name="cin_ens">
+      <ColNames>cin_ens
+type_cours</ColNames>
+    </index>
+    <index id="64" parent="21" name="num_classe">
+      <ColNames>num_classe
+num_niveau</ColNames>
+    </index>
+    <index id="65" parent="21" name="num_salle">
+      <ColNames>num_salle</ColNames>
+    </index>
+    <key id="66" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>num_séance</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="67" parent="21" name="séance_ibfk_3">
+      <ColNames>num_classe
+num_niveau</ColNames>
+      <RefSchemaName>collége</RefSchemaName>
+      <RefTableName>classe</RefTableName>
+      <RefColNames>num_classe
+num_niveau</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="68" parent="21" name="séance_ibfk_1">
+      <ColNames>cin_ens
+type_cours</ColNames>
+      <RefSchemaName>collége</RefSchemaName>
+      <RefTableName>enseignement</RefTableName>
+      <RefColNames>cin_ens
+type_cours</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="69" parent="21" name="séance_ibfk_2">
+      <ColNames>num_salle</ColNames>
+      <RefSchemaName>collége</RefSchemaName>
+      <RefTableName>salle</RefTableName>
+      <RefColNames>num_salle</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+  </database-model>
+</dataSource>

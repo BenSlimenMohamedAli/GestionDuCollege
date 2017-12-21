@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="anchroPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+    <stylesheets>
+        <URL value="@login.css" />
+    </stylesheets>
+   <children>
+      <TextField layoutX="84.0" layoutY="116.0" promptText="Votre nom" fx:id="username" styleClass="textField" />
+      <PasswordField layoutX="84.0" layoutY="154.0" promptText="Votre mot de passe" styleClass="textField" fx:id="password"/>
+      <Button layoutX="109.0" layoutY="200.0" mnemonicParsing="false" text="    Se connecter" onAction="#doSomething">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" iconName="SIGN_IN" />
+         </graphic></Button>
+      <RadioButton fx:id="choixEleve" layoutX="109.0" layoutY="249.0" mnemonicParsing="false" selected="true" styleClass="radioB" text="Elève">
+         <toggleGroup>
+            <ToggleGroup fx:id="choix" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="choixEnseignant" layoutX="109.0" layoutY="279.0" mnemonicParsing="false" styleClass="radioB" text="Enseignant" toggleGroup="$choix" />
+      <Label layoutX="13.0" layoutY="366.0" prefHeight="20.0" prefWidth="575.0" styleClass="resultL" textAlignment="CENTER" fx:id="result">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <FontAwesomeIcon fill="#526e9a" iconName="USER" layoutX="266.0" layoutY="135.0" />
+      <FontAwesomeIcon fill="#2e4b72" iconName="KEY" layoutX="266.0" layoutY="173.0" />
+   </children>
+</AnchorPane>
