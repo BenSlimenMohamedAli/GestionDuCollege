@@ -1,14 +1,14 @@
 .root{
 }
 .anchroPane{
-    -fx-background-color: linear-gradient(#AE2121,#0F6668 60%);
+    -fx-background-image: url("./image/back.jpg");
     -fx-opacity: 0.75;
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
 }
 
 .anchroPane1{
-    -fx-background-color: #1F2127;
+    -fx-background-color:  #0F6668;
     opacity:0.9;
 }
 .anchorPane2{
@@ -43,7 +43,7 @@
     -fx-min-height: 30px;
     -fx-cursor: hand;
     -fx-text-fill: white;
-    -fx-background-color: linear-gradient(#FF3300,#140F2D);
+    -fx-background-color: #AE2121;
 
 }
 
