@@ -8,28 +8,34 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="343.0" prefWidth="484.0" styleClass="anchroPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController" minHeight="350" maxHeight="350" minWidth="400" maxWidth="400">
+<AnchorPane maxHeight="508.0" maxWidth="661.0" minHeight="350" minWidth="400" prefHeight="356.0" prefWidth="448.0" styleClass="anchroPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
     <stylesheets>
         <URL value="@login.css" />
     </stylesheets>
    <children>
-      <TextField fx:id="username" layoutX="28.0" layoutY="58.0" promptText="Votre nom" styleClass="textField" />
-      <PasswordField fx:id="password" layoutX="28.0" layoutY="106.0" promptText="Votre mot de passe" styleClass="textField" />
-      <Button layoutX="28.0" layoutY="150.0" mnemonicParsing="false" onAction="#seConnecter" text="Se connecter">
-         <graphic>
-            <FontAwesomeIcon fill="WHITE" iconName="SIGN_IN" wrappingWidth="19.285714149475098" />
-         </graphic></Button>
-      <RadioButton fx:id="choixEleve" layoutX="54.0" layoutY="204.0" mnemonicParsing="false" selected="true" styleClass="radioB" text="Elève">
-         <toggleGroup>
-            <ToggleGroup fx:id="choix" />
-         </toggleGroup></RadioButton>
-      <RadioButton fx:id="choixEnseignant" layoutX="54.0" layoutY="231.0" mnemonicParsing="false" styleClass="radioB" text="Enseignant" toggleGroup="$choix" />
-      <Label fx:id="result" layoutX="10.0" layoutY="285.0" prefHeight="20.0" prefWidth="465.0" styleClass="resultL" textAlignment="CENTER">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <FontAwesomeIcon fill="#526e9a" iconName="USER" layoutX="213.0" layoutY="77.0" />
-      <FontAwesomeIcon fill="#2e4b72" iconName="KEY" layoutX="212.0" layoutY="125.0" />
+      <AnchorPane layoutX="128.0" layoutY="63.0" prefHeight="185.0" prefWidth="212.0" styleClass="anchroPane1">
+         <children>
+            <TextField fx:id="username" layoutX="6.0" layoutY="32.0" promptText="Votre nom" styleClass="textField" />
+            <PasswordField fx:id="password" layoutX="6.0" layoutY="71.0" promptText="Votre mot de passe" styleClass="textField" />
+            <FontAwesomeIcon fill="#526e9a" iconName="USER" layoutX="187.0" layoutY="50.0" />
+            <Button layoutX="34.0" layoutY="114.0" mnemonicParsing="false" onAction="#seConnecter" text="Se connecter">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" iconName="SIGN_IN" wrappingWidth="19.285714149475098" />
+               </graphic>
+            </Button>
+            <RadioButton fx:id="choixEleve" layoutX="34.0" layoutY="165.0" mnemonicParsing="false" selected="true" styleClass="radioB" text="Elève">
+               <toggleGroup>
+                  <ToggleGroup fx:id="choix" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="choixEnseignant" layoutX="106.0" layoutY="165.0" mnemonicParsing="false" styleClass="radioB" text="Enseignant" toggleGroup="$choix" />
+            <FontAwesomeIcon fill="#2e4b72" iconName="KEY" layoutX="187.0" layoutY="96.0" />
+            <Label fx:id="result" layoutX="9.0" layoutY="193.0" prefHeight="20.0" prefWidth="200.0" styleClass="resultL" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

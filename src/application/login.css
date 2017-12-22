@@ -1,10 +1,35 @@
 .root{
 }
 .anchroPane{
-    -fx-background-image: url("./image/back.jpg");
+    -fx-background-color: linear-gradient(#AE2121,#0F6668 60%);
     -fx-opacity: 0.75;
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
+}
+
+.anchroPane1{
+    -fx-background-color: #1F2127;
+    opacity:0.9;
+}
+.anchorPane2{
+    -fx-background-color: linear-gradient(#1F2127,#0F6668 60%);
+}
+
+.title{
+    -fx-fill: #AE2121;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.title1{
+    -fx-fill: #BBC2CB;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.text{
+    -fx-fill: #F1E9D7;
+    -fx-font-size: 15px;
 }
 
 .textField{
@@ -35,7 +60,7 @@
 
 /* label */
 .resultL{
-    -fx-text-fill: red;
+    -fx-text-fill: #F1E9D7;
 }
 
 /* Background de splashscreen */

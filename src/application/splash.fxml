@@ -1,22 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.net.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
 <?import java.net.URL?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="application.SplashController"
-            prefHeight="400.0" prefWidth="600.0"
-fx:id="ap"
-styleClass="splash">
+
+<AnchorPane fx:id="ap" prefHeight="598.0" prefWidth="603.0" styleClass="splash" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SplashController">
     <stylesheets>
-        <URL value="@login.css"></URL>
+        <URL value="@login.css" />
     </stylesheets>
+   <children>
+      <AnchorPane layoutY="501.0" prefHeight="104.0" prefWidth="603.0" styleClass="anchorPane2">
+         <children>
+            <Text layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title" text="Gestion des absence d'un collége " wrappingWidth="337.13671875" />
+            <Text layoutX="27.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="title1" text="Realisé par :" wrappingWidth="122.357421875" />
+            <Text layoutX="53.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Ben Slimen Mohamed ali" />
+            <Text layoutX="218.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text=",   Ben Yahya Haythem" />
+            <Text layoutX="366.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text=",   Jmaa Adem" />
+         </children>
+      </AnchorPane>
+   </children>
+
+
 
 </AnchorPane>

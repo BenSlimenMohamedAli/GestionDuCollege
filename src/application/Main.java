@@ -15,10 +15,10 @@ public class Main extends Application {
         Parent root = (Parent) loader.load();
         Scene scene = new Scene(root);
         splash.setScene(scene);
-        splash.setMinHeight(500);
-        splash.setMaxHeight(500);
-        splash.setMinWidth(500);
-        splash.setMaxWidth(500);
+        splash.setMinHeight(640);
+        splash.setMaxHeight(640);
+        splash.setMinWidth(600);
+        splash.setMaxWidth(600);
         splash.show();
     }
 

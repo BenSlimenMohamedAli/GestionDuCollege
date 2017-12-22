@@ -22,7 +22,7 @@ public class SplashController implements Initializable {
         @Override
         public void run(){
             try {
-                Thread.sleep(7000);
+                Thread.sleep(10000);
 
                 Platform.runLater(() -> {
                     Stage login = new Stage();
@@ -35,10 +35,10 @@ public class SplashController implements Initializable {
                     Scene scene = new Scene(root);
                     login.setScene(scene);
                     login.show();
-                    login.setMinHeight(350);
-                    login.setMaxHeight(350);
-                    login.setMinWidth(450);
-                    login.setMaxWidth(450);
+                    login.setMinHeight(400);
+                    login.setMaxHeight(400);
+                    login.setMinWidth(500);
+                    login.setMaxWidth(500);
                     login.setTitle("Login page");
                     ap.getScene().getWindow().hide();
                 });
