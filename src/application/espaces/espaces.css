@@ -1,6 +1,61 @@
-
-.root{
+.anchroPane{
     -fx-background-image: url("./image/back.jpg");
+    -fx-opacity: 0.75;
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
+}
+
+.anchroPane1{
+    -fx-background-color:  #0F6668;
+    -fx-opacity:1;
+    -fx-effect: dropshadow(one-pass-box, #AE2121,1,1,-2,-2);
+}
+.anchorPane2{
+    -fx-background-color: linear-gradient(#1F2127,#0F6668 60%);
+}
+
+.container{
+    -fx-background-color: linear-gradient(#015668,black);
+    -fx-border-radius: 20px;
+}
+
+.text{
+    -fx-fill: #F1E9D7;
+    -fx-font-size: 15px;
+}
+
+.textField{
+    -fx-min-height:30px;
+    -fx-min-width: 200px;
+}
+
+/* Les buttons */
+.button{
+    -fx-min-width: 150px;
+    -fx-min-height: 30px;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(white,#140F2D);
+
+}
+
+.button:hover{
+    -fx-translate-z: 2px;
+    -fx-background-color: #AE2121;
+    -fx-font-weight: bold;
+}
+
+.radioB{
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+.tit{
+    -fx-fill: #F1E9D7;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+.get{
+    -fx-fill: white;
+    -fx-font-size: 13px;
 }

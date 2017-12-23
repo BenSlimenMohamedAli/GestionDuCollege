@@ -9,10 +9,16 @@
 
 .anchroPane1{
     -fx-background-color:  #0F6668;
-    opacity:0.9;
+    -fx-opacity:1;
+    -fx-effect: dropshadow(one-pass-box, #AE2121,1,1,-2,-2);
 }
 .anchorPane2{
     -fx-background-color: linear-gradient(#1F2127,#0F6668 60%);
+}
+
+.container{
+    -fx-background-color: linear-gradient(#015668,black);
+    -fx-border-radius: 20px;
 }
 
 .title{
@@ -43,13 +49,13 @@
     -fx-min-height: 30px;
     -fx-cursor: hand;
     -fx-text-fill: white;
-    -fx-background-color: #AE2121;
+    -fx-background-color: linear-gradient(white,#140F2D);
 
 }
 
 .button:hover{
     -fx-translate-z: 2px;
-    -fx-background-color: linear-gradient(white,#140F2D);
+    -fx-background-color: #AE2121;
     -fx-font-weight: bold;
 }
 

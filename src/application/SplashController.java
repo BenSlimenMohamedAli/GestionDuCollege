@@ -39,7 +39,7 @@ public class SplashController implements Initializable {
                     login.setMaxHeight(400);
                     login.setMinWidth(500);
                     login.setMaxWidth(500);
-                    login.setTitle("Login page");
+                    login.setTitle("Connection");
                     ap.getScene().getWindow().hide();
                 });
             } catch (InterruptedException ex) {

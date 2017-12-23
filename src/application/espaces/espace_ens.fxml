@@ -1,15 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 <?import java.net.URL?>
-<AnchorPane prefHeight="799.0" prefWidth="1076.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.espaces.EspaceEnsController">
+
+<AnchorPane prefHeight="682.0" prefWidth="1000.0" styleClass="anchroPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.espaces.EspaceEnsController">
     <stylesheets>
         <URL value="@espaces.css" />
     </stylesheets>
+   <children>
+      <AnchorPane layoutX="610.0" layoutY="250.0" prefHeight="389.0" prefWidth="360.0" styleClass="container">
+         <children>
+            <AnchorPane layoutX="22.0" layoutY="42.0" prefHeight="330.0" prefWidth="325.0" styleClass="anchroPane1" />
+            <FontAwesomeIcon fill="#c9adad" iconName="GRADUATION_CAP" layoutX="22.0" layoutY="35.0" size="2em" text="" wrappingWidth="33.4285888671875" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="131.0" prefHeight="489.0" prefWidth="584.0" styleClass="container">
+         <children>
+            <AnchorPane layoutX="19.0" layoutY="45.0" prefHeight="434.0" prefWidth="546.0" styleClass="anchroPane1">
+               <children>
+                  <TableView layoutX="6.0" layoutY="4.0" prefHeight="417.0" prefWidth="534.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="C1" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
+            <FontAwesomeIcon fill="#c9adad" iconName="LIST" layoutX="22.0" layoutY="35.0" size="2em" />
+            <Text layoutX="54.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tit" text="La liste de vos séances" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="70.0" prefWidth="1000.0" styleClass="container">
+         <children>
+            <AnchorPane layoutX="47.0" layoutY="19.0" prefHeight="39.0" prefWidth="910.0" styleClass="anchroPane1">
+               <children>
+                  <Text layoutX="14.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tit" text="Nom : " />
+                  <Text layoutX="192.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tit" text="Cin :" />
+                  <Text layoutX="319.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tit" text="Professions :" />
+                  <Text fx:id="aNom" layoutX="55.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="get" wrappingWidth="133.13671875" />
+                  <Text fx:id="aCin" layoutX="225.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="get" wrappingWidth="84.13671875" />
+                  <Text fx:id="aProf" layoutX="403.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="get" wrappingWidth="303.13671875" />
+               </children>
+            </AnchorPane>
+            <FontAwesomeIcon fill="#c9adad" iconName="GRADUATION_CAP" layoutX="14.0" layoutY="47.0" size="2em" text="" wrappingWidth="33.4285888671875" />
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>

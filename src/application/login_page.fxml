@@ -8,33 +8,38 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="508.0" maxWidth="661.0" minHeight="350" minWidth="400" prefHeight="356.0" prefWidth="448.0" styleClass="anchroPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:id="ap" fx:controller="application.LoginController">
+<AnchorPane fx:id="ap" maxHeight="508.0" maxWidth="661.0" minHeight="307.0" minWidth="257.0" prefHeight="363.0" prefWidth="524.0" styleClass="anchroPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
     <stylesheets>
         <URL value="@login.css" />
     </stylesheets>
    <children>
-      <AnchorPane layoutX="128.0" layoutY="63.0" prefHeight="185.0" prefWidth="212.0" styleClass="anchroPane1">
+      <AnchorPane layoutX="84.0" layoutY="14.0" prefHeight="306.0" prefWidth="256.0" styleClass="container">
          <children>
-            <TextField fx:id="username" layoutX="6.0" layoutY="32.0" promptText="Votre nom" styleClass="textField" />
-            <PasswordField fx:id="password" layoutX="6.0" layoutY="71.0" promptText="Votre mot de passe" styleClass="textField" />
-            <FontAwesomeIcon fill="#526e9a" iconName="USER" layoutX="187.0" layoutY="50.0" />
-            <Button layoutX="34.0" layoutY="114.0" mnemonicParsing="false" onAction="#seConnecter" text="Se connecter">
-               <graphic>
-                  <FontAwesomeIcon fill="WHITE" iconName="SIGN_IN" wrappingWidth="19.285714149475098" />
-               </graphic>
-            </Button>
-            <RadioButton fx:id="choixEleve" layoutX="34.0" layoutY="165.0" mnemonicParsing="false" selected="true" styleClass="radioB" text="Elève">
-               <toggleGroup>
-                  <ToggleGroup fx:id="choix" />
-               </toggleGroup>
-            </RadioButton>
-            <RadioButton fx:id="choixEnseignant" layoutX="106.0" layoutY="165.0" mnemonicParsing="false" styleClass="radioB" text="Enseignant" toggleGroup="$choix" />
-            <FontAwesomeIcon fill="#2e4b72" iconName="KEY" layoutX="187.0" layoutY="96.0" />
-            <Label fx:id="result" layoutX="9.0" layoutY="193.0" prefHeight="20.0" prefWidth="200.0" styleClass="resultL" textAlignment="CENTER">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
+            <AnchorPane layoutX="22.0" layoutY="79.0" prefHeight="185.0" prefWidth="212.0" styleClass="anchroPane1">
+               <children>
+                  <TextField fx:id="username" layoutX="6.0" layoutY="32.0" promptText="Votre nom" styleClass="textField" />
+                  <PasswordField fx:id="password" layoutX="6.0" layoutY="71.0" promptText="Votre mot de passe" styleClass="textField" />
+                  <FontAwesomeIcon fill="#526e9a" iconName="USER" layoutX="187.0" layoutY="50.0" />
+                  <Button layoutX="34.0" layoutY="114.0" mnemonicParsing="false" onAction="#seConnecter" text="Se connecter">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" iconName="SIGN_IN" wrappingWidth="19.285714149475098" />
+                     </graphic>
+                  </Button>
+                  <RadioButton fx:id="choixEleve" layoutX="34.0" layoutY="165.0" mnemonicParsing="false" selected="true" styleClass="radioB" text="Elève">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="choix" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="choixEnseignant" layoutX="106.0" layoutY="165.0" mnemonicParsing="false" styleClass="radioB" text="Enseignant" toggleGroup="$choix" />
+                  <FontAwesomeIcon fill="#2e4b72" iconName="KEY" layoutX="187.0" layoutY="96.0" />
+                  <Label fx:id="result" layoutX="9.0" layoutY="193.0" prefHeight="20.0" prefWidth="200.0" styleClass="resultL" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <FontAwesomeIcon fill="#c9adad" iconName="GRADUATION_CAP" layoutX="81.0" layoutY="68.0" size="6em" text="" wrappingWidth="110.4285888671875" />
          </children>
       </AnchorPane>
    </children>

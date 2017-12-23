@@ -14,7 +14,8 @@ public class Séance {
 
     // Constructeur
 
-    public Séance(Time heure_séance, String jour_séance, int num_niveau, int num_classe, int cin_ens, String type_cours, int num_salle) {
+    public Séance(int num_séance,Time heure_séance, String jour_séance, int num_niveau, int num_classe, int cin_ens, String type_cours, int num_salle) {
+        this.num_séance = num_séance;
         this.heure_séance = heure_séance;
         this.jour_séance = jour_séance;
         this.num_niveau = num_niveau;

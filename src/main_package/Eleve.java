@@ -68,7 +68,7 @@ public class Eleve {
             Class.forName("com.mysql.jdbc.Driver");
             connect = DriverManager.getConnection("jdbc:mysql://localhost/collége?autoReconnect=true&useSSL=false","root","Dali123");
             statement = connect.createStatement();
-            resultSet = statement.executeQuery("select* from eleve where num_inscri = '"+password+"' and nom ='"+username+"'");
+            resultSet = statement.executeQuery("select* from eleve where num_inscri = '"+password+"' and nom+' '+prenom ='"+username+"'");
             int c =0;
             while(resultSet.next()){
                 c++;
