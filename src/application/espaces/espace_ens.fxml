@@ -22,16 +22,12 @@
             <FontAwesomeIcon fill="#c9adad" iconName="GRADUATION_CAP" layoutX="22.0" layoutY="35.0" size="2em" text="" wrappingWidth="33.4285888671875" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="14.0" layoutY="131.0" prefHeight="489.0" prefWidth="584.0" styleClass="container">
+      <AnchorPane layoutX="14.0" layoutY="131.0" prefHeight="489.0" prefWidth="473.0" styleClass="container">
          <children>
-            <AnchorPane layoutX="19.0" layoutY="45.0" prefHeight="434.0" prefWidth="546.0" styleClass="anchroPane1">
+            <AnchorPane layoutX="19.0" layoutY="45.0" prefHeight="434.0" prefWidth="440.0" styleClass="anchroPane1">
                <children>
-                  <TableView layoutX="6.0" layoutY="4.0" prefHeight="417.0" prefWidth="534.0">
-                    <columns>
-                      <TableColumn prefWidth="75.0" text="C1" />
-                      <TableColumn prefWidth="75.0" text="C2" />
-                    </columns>
-                  </TableView>
+                  <ListView fx:id="listséance" layoutX="5.0" layoutY="27.0" prefHeight="400.0" prefWidth="424.0" styleClass="listeséance" />
+                  <Text layoutX="5.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tit" text="numero / heure /jour / niveau / classe / cours / numero de la salle " />
                </children></AnchorPane>
             <FontAwesomeIcon fill="#c9adad" iconName="LIST" layoutX="22.0" layoutY="35.0" size="2em" />
             <Text layoutX="54.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tit" text="La liste de vos séances" />

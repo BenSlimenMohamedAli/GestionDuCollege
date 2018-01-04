@@ -1,20 +1,25 @@
 package application.espaces;
 
+import javafx.beans.value.ObservableValue;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.image.ImageView;
+import javafx.scene.control.ListCell;
+import javafx.scene.control.ListView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import main_package.Enseignement;
 import main_package.Séance;
-import sun.plugin.javascript.navig.Anchor;
-
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Observable;
 
 
 public class EspaceEnsController {
     @FXML private AnchorPane ap;
     @FXML private Text aCin,aNom,aProf;
+    @FXML private ListView<String> listséance;
 
     public static String user;
     public static int pass;
@@ -49,6 +54,22 @@ public class EspaceEnsController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        ObservableList<String> items = listséance.getItems();
+        ArrayList<Séance> séances = new ArrayList<>();
+        séances = Séance.getListSeances(pass);
+        for (int i =0;i<séances.size();i++){
+            items.add(séances.get(i).toString());
+        }
+
+        // Si en click sur un élément de la liste
+        listséance.getSelectionModel().selectedItemProperty().addListener(
+                (ObservableValue<? extends String> ov, String old_val,
+                 String new_val) -> {
+
+
+                });
+
 
 
 

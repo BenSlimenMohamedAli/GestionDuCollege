@@ -1,6 +1,7 @@
 package main_package;
 
-import java.sql.Time;
+import java.sql.*;
+import java.util.ArrayList;
 
 public class Séance {
     private int num_séance;
@@ -85,5 +86,52 @@ public class Séance {
 
     public void setNum_salle(int num_salle) {
         this.num_salle = num_salle;
+    }
+
+    // toString
+
+
+    @Override
+    public String toString() {
+        return  num_séance +
+                " / " + heure_séance +
+                " / " + jour_séance  +
+                " / " + num_niveau +
+                " / " + num_classe +
+                " / " + type_cours +
+                " / " + num_salle;
+    }
+
+    // retourner la liste des séances d'un enseignant
+    public static ArrayList<Séance> getListSeances(int cin){
+        ArrayList<Séance> list = new ArrayList<>();
+        Connection connect = null;
+        Statement statement = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            connect = DriverManager.getConnection("jdbc:mysql://localhost/collége?autoReconnect=true&useSSL=false","root","Dali123");
+            statement = connect.createStatement();
+            resultSet = statement.executeQuery("select * from séance WHERE cin_ens ='"+cin+"'");
+
+            while(resultSet.next()){
+                Séance s = new Séance(resultSet.getInt("num_séance")
+                        ,resultSet.getTime("heure_séance")
+                        ,resultSet.getString("jour_séance")
+                        ,resultSet.getInt("num_niveau")
+                        ,resultSet.getInt("num_classe")
+                        ,resultSet.getInt("cin_ens")
+                        ,resultSet.getString("type_cours")
+                        ,resultSet.getInt("num_salle"));
+                list.add(s);
+            }
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return list;
     }
 }

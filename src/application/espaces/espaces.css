@@ -59,3 +59,7 @@
     -fx-fill: white;
     -fx-font-size: 13px;
 }
+
+.listeséance{
+    -fx-fill: black;
+}
